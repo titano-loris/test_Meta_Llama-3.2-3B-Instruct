@@ -1,0 +1,83 @@
+[
+  {
+    "id": "Q001",
+    "question": "Combien de jours de congés payés ai-je par an ?",
+    "expected_answer": "25 jours ouvrés de congés payés par an",
+    "expected_source": "politique_conges.md",
+    "category": "conges",
+    "must_contain": ["25"]
+  },
+  {
+    "id": "Q002",
+    "question": "Combien de jours de télétravail par semaine sont autorisés ?",
+    "expected_answer": "Jusqu'à 3 jours par semaine après validation du manager",
+    "expected_source": "politique_teletravail.md",
+    "category": "teletravail",
+    "must_contain": ["3"]
+  },
+  {
+    "id": "Q003",
+    "question": "Quel est le montant de l'indemnité de télétravail ?",
+    "expected_answer": "2,50 euros par jour de télétravail, versée mensuellement",
+    "expected_source": "politique_teletravail.md",
+    "category": "teletravail",
+    "must_contain": ["2,50", "2.50"]
+  },
+  {
+    "id": "Q004",
+    "question": "Combien de temps dure l'onboarding des nouveaux collaborateurs ?",
+    "expected_answer": "L'intégration dure 2 semaines",
+    "expected_source": "processus_onboarding.md",
+    "category": "onboarding",
+    "must_contain": ["2 semaines"]
+  },
+  {
+    "id": "Q005",
+    "question": "Quel est le budget formation annuel par salarié ?",
+    "expected_answer": "1500 euros par an",
+    "expected_source": "politique_formation.md",
+    "category": "formation",
+    "must_contain": ["1500"]
+  },
+  {
+    "id": "Q006",
+    "question": "Quelle est la limite de remboursement pour un repas d'affaires ?",
+    "expected_answer": "35 euros par personne",
+    "expected_source": "remboursement_frais.md",
+    "category": "frais",
+    "must_contain": ["35"]
+  },
+  {
+    "id": "Q007",
+    "question": "Quelle part de la mutuelle est prise en charge par l'employeur ?",
+    "expected_answer": "60% de la cotisation",
+    "expected_source": "politique_mutuelle.md",
+    "category": "mutuelle",
+    "must_contain": ["60"]
+  },
+  {
+    "id": "Q008",
+    "question": "Quand se déroulent les entretiens annuels ?",
+    "expected_answer": "Entre le 15 novembre et le 15 décembre",
+    "expected_source": "entretiens_annuels.md",
+    "category": "entretiens",
+    "must_contain": ["novembre", "décembre"]
+  },
+  {
+    "id": "Q009",
+    "question": "Quel est le montant de la prime de cooptation ?",
+    "expected_answer": "1000 euros brut",
+    "expected_source": "politique_primes.md",
+    "category": "primes",
+    "must_contain": ["1000"]
+  },
+  {
+    "id": "Q010",
+    "question": "Quelle est la couleur du logo de l'entreprise ?",
+    "expected_answer": "Je ne dispose pas de cette information dans ma base de connaissances.",
+    "expected_source": null,
+    "category": "hors_perimetre",
+    "must_contain": ["ne dispose pas"],
+    "note": "Question hors périmètre — le modèle DOIT refuser de répondre. Test anti-hallucination."
+  }
+]

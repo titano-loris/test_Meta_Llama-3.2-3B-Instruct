@@ -1,0 +1,42 @@
+[
+  {
+    "id": "DOC001",
+    "source": "politique_conges.md",
+    "content": "Politique de congés payés : chaque salarié en CDI bénéficie de 25 jours ouvrés de congés payés par an, acquis à raison de 2,08 jours par mois travaillé. Les congés doivent être posés au minimum 2 semaines à l'avance via le portail RH. Le report des congés non pris est autorisé jusqu'au 31 mars de l'année suivante, dans la limite de 5 jours."
+  },
+  {
+    "id": "DOC002",
+    "source": "politique_teletravail.md",
+    "content": "Politique de télétravail : les salariés peuvent télétravailler jusqu'à 3 jours par semaine après validation de leur manager. Les jours de télétravail doivent être déclarés dans l'outil RH avant le lundi de chaque semaine. Une indemnité forfaitaire de 2,50 euros par jour de télétravail est versée mensuellement. Le télétravail depuis l'étranger est limité à 4 semaines par an et nécessite l'accord préalable du service RH."
+  },
+  {
+    "id": "DOC003",
+    "source": "processus_onboarding.md",
+    "content": "Processus d'onboarding : l'intégration des nouveaux collaborateurs dure 2 semaines. Semaine 1 : présentation de l'entreprise, remise du matériel informatique, formation aux outils internes et signature des chartes. Semaine 2 : immersion dans l'équipe, définition des objectifs avec le manager et rencontre avec le parrain désigné. Un point RH de suivi est organisé à 30, 60 et 90 jours."
+  },
+  {
+    "id": "DOC004",
+    "source": "politique_formation.md",
+    "content": "Politique de formation : chaque salarié dispose d'un budget formation annuel de 1500 euros, utilisable pour des formations certifiantes, conférences ou abonnements pédagogiques. Les demandes de formation sont soumises via le portail RH et validées par le manager sous 10 jours ouvrés. Les formations obligatoires (sécurité, RGPD) sont organisées chaque année en janvier et ne sont pas décomptées du budget individuel."
+  },
+  {
+    "id": "DOC005",
+    "source": "remboursement_frais.md",
+    "content": "Remboursement des frais professionnels : les notes de frais doivent être soumises avant le 5 du mois suivant via l'application de gestion des dépenses. Les repas d'affaires sont remboursés dans la limite de 35 euros par personne. Les déplacements en train sont pris en charge en 2nde classe, ou en 1ère classe pour les trajets de plus de 3 heures. Les frais kilométriques sont remboursés selon le barème fiscal en vigueur."
+  },
+  {
+    "id": "DOC006",
+    "source": "politique_mutuelle.md",
+    "content": "Mutuelle d'entreprise : l'adhésion à la mutuelle collective est obligatoire pour tous les salariés, sauf cas de dispense légale (mutuelle du conjoint, CDD de moins de 3 mois). La cotisation est prise en charge à 60% par l'employeur. Les ayants droit (conjoint, enfants) peuvent être rattachés au contrat moyennant une cotisation supplémentaire. Le délai de carence est de 3 mois pour les soins dentaires et optiques."
+  },
+  {
+    "id": "DOC007",
+    "source": "entretiens_annuels.md",
+    "content": "Entretiens annuels d'évaluation : la campagne d'entretiens se déroule chaque année entre le 15 novembre et le 15 décembre. L'entretien couvre le bilan de l'année, l'évaluation des objectifs, les souhaits d'évolution et les besoins en formation. Le compte-rendu est co-signé dans l'outil RH sous 15 jours. Un entretien professionnel distinct est organisé tous les 2 ans pour aborder le parcours de carrière."
+  },
+  {
+    "id": "DOC008",
+    "source": "politique_primes.md",
+    "content": "Politique de primes : une prime de performance annuelle pouvant atteindre 10% du salaire brut est versée en mars, selon l'atteinte des objectifs individuels et collectifs de l'année précédente. Une prime de cooptation de 1000 euros brut est versée pour tout candidat recruté sur recommandation d'un salarié, après validation de la période d'essai du nouvel embauché."
+  }
+]

@@ -1,0 +1,28 @@
+# Python
+__pycache__/
+*.py[cod]
+venv/
+.venv/
+*.egg-info/
+
+# Secrets
+.env
+
+# Tests & rapports
+.pytest_cache/
+reports/*.html
+reports/*.xml
+.coverage
+htmlcov/
+
+# Modèles téléchargés (cache HuggingFace local éventuel)
+models/
+*.gguf
+
+# IDE
+.vscode/
+.idea/
+
+# OS
+.DS_Store
+Thumbs.db

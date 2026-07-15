@@ -1,0 +1,63 @@
+# Pipeline CI/CD GitLab — RAG-TestKit
+#
+# Stratégie : les tests unitaires (rapides, sans LLM) tournent sur chaque
+# commit. Les tests d'évaluation LLM (lents, gourmands en RAM) tournent
+# uniquement sur la branche main ou manuellement — un runner standard
+# GitLab n'a pas les ressources pour charger un modèle 3B.
+
+stages:
+  - lint
+  - unit-tests
+  - evaluation
+
+variables:
+  PIP_CACHE_DIR: "$CI_PROJECT_DIR/.cache/pip"
+
+cache:
+  paths:
+    - .cache/pip
+
+default:
+  image: python:3.11-slim
+  before_script:
+    - pip install --upgrade pip
+
+lint:
+  stage: lint
+  script:
+    - pip install ruff
+    - ruff check app/ tests/
+  allow_failure: true
+
+unit-tests:
+  stage: unit-tests
+  script:
+    - pip install -r requirements.txt
+    - pytest tests/unit/ -m unit
+      --junitxml=reports/junit-unit.xml
+      --html=reports/unit-report.html --self-contained-html
+  artifacts:
+    when: always
+    paths:
+      - reports/
+    reports:
+      junit: reports/junit-unit.xml
+
+# Tests LLM — exécution manuelle ou sur runner dédié (>= 16GB RAM)
+evaluation-llm:
+  stage: evaluation
+  rules:
+    - if: '$CI_COMMIT_BRANCH == "main"'
+      when: manual
+  script:
+    - pip install -r requirements.txt
+    - pytest tests/evaluation/ tests/integration/ -m slow
+      --junitxml=reports/junit-eval.xml
+      --html=reports/eval-report.html --self-contained-html
+  artifacts:
+    when: always
+    paths:
+      - reports/
+    reports:
+      junit: reports/junit-eval.xml
+  timeout: 2h
