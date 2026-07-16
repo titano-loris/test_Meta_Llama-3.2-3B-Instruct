@@ -1,7 +1,5 @@
 """
-Tests d'intégration du pipeline RAG complet.
-
-Ces tests chargent le LLM — ils sont LENTS (30-90s par requête sur CPU).
+Ces tests chargent le LLM.
 Marqués @pytest.mark.slow pour pouvoir les exclure en développement :
 
     pytest -m "not slow"          → tests rapides uniquement

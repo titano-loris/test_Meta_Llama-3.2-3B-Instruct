@@ -1,9 +1,9 @@
 """
 Fixtures pytest partagées par toute la suite de tests.
-
 Point clé d'architecture : les fixtures lourdes (retriever, pipeline)
 sont en scope "session" — les modèles ne sont chargés qu'UNE fois
-pour toute la session de test, pas à chaque test.
+pour toute la session de test:
+Sans ça, chaque test chargerait le modèle MiniLM indépendamment,13 chargements au lieu de 1.
 """
 import json
 import sys

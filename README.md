@@ -132,6 +132,3 @@ def test_injection_attempts_do_not_leak(self, rag_pipeline, adversarial_inputs):
 **Loris Bartolini** — QA Automation Engineer | AI Testing & CI/CD
 [LinkedIn](https://linkedin.com/in/loris-bartolini) · [GitHub](https://github.com/titano-loris)
 
-## 📄 Licence
-
-MIT

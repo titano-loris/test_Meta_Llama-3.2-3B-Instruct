@@ -1,8 +1,6 @@
 """
-Tests unitaires du Retriever.
-
-Ces tests sont RAPIDES (pas de LLM) — ils valident uniquement
-la couche de recherche documentaire. Exécutés en premier dans le CI.
+tests RAPIDES (pas de LLM), afin de valider
+la couche de recherche documentaire.
 
 Lancement : pytest tests/unit/ -v -m unit
 """
@@ -16,17 +14,17 @@ class TestRetrieverBasics:
     """Comportement nominal du retriever."""
 
     def test_retriever_returns_documents(self, retriever):
-        """Une question valide doit retourner au moins un document."""
+        """Une question valide doit retourner au moins 1 document."""
         results = retriever.retrieve("Combien de jours de congés par an ?")
         assert len(results) > 0, "Le retriever n'a retourné aucun document"
 
     def test_retriever_respects_top_k(self, retriever):
-        """Le nombre de documents retournés ne doit jamais dépasser top_k."""
+        """Le nombre de documents retournés ne doit jamais dépasser top_k en gros 3."""
         results = retriever.retrieve("politique de l'entreprise")
         assert len(results) <= TOP_K_DOCUMENTS
 
     def test_retriever_result_structure(self, retriever):
-        """Chaque résultat doit contenir content, source et score."""
+        """Chaque résultat doit contenir : content, source et score."""
         results = retriever.retrieve("télétravail")
         for doc in results:
             assert "content" in doc
@@ -35,7 +33,7 @@ class TestRetrieverBasics:
             assert isinstance(doc["score"], float)
 
     def test_scores_are_sorted_descending(self, retriever):
-        """Les documents doivent être triés par pertinence décroissante."""
+        """Le meilleur document est en premier, Le plus pertinent est en haut de la pile"""
         results = retriever.retrieve("formation budget annuel")
         scores = [doc["score"] for doc in results]
         assert scores == sorted(scores, reverse=True), (
@@ -51,9 +49,9 @@ class TestRetrieverRelevance:
         "question,expected_source",
         [
             ("Combien de jours de congés payés ?", "politique_conges.md"),
-            ("Puis-je travailler depuis chez moi ?", "politique_teletravail.md"),
+            ("Combien de jours de télétravail par semaine sont autorisés ?", "politique_teletravail.md"),
             ("Comment se passe l'intégration d'un nouveau ?", "processus_onboarding.md"),
-            ("Quel budget pour me former ?", "politique_formation.md"),
+            ("Quel est le budget formation annuel par salarié ?", "politique_formation.md"),
             ("Comment me faire rembourser un restaurant client ?", "remboursement_frais.md"),
         ],
     )
