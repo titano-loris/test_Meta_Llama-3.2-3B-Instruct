@@ -1,14 +1,10 @@
-# 🧪 RAG-TestKit
+# 🧪 RAG Test
 
 **A Quality Assurance Framework for Retrieval-Augmented Generation Systems**
 
-[![Python 3.11+](https://img.shields.io/badge/python-3.11+-blue.svg)](https://www.python.org/downloads/)
-[![pytest](https://img.shields.io/badge/tested%20with-pytest-0A9EDC.svg)](https://pytest.org)
-[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
 
-> Comment tester une application IA dont les réponses ne sont pas déterministes ?
-> Ce projet apporte une réponse structurée : un framework de test complet pour
-> systèmes RAG, couvrant la qualité du retrieval, la fidélité des réponses,
+> Ce projet présente la technique RAG (Retrieval-Augmented Generation)
+> couvrant la qualité du retrieval, la fidélité des réponses,
 > la détection d'hallucinations et la résistance aux attaques adversariales.
 
 ---
@@ -51,13 +47,12 @@ rag-testkit/
 - **LLM** : `meta-llama/Llama-3.2-3B-Instruct` (local, ~8GB RAM)
 - **Vector store** : FAISS (index en mémoire)
 - **Tests** : pytest + markers (`unit`, `slow`, `security`, `evaluation`)
-- **CI/CD** : GitLab CI + Azure DevOps (stratégie deux niveaux)
 
 ## 🚀 Installation
 
 ```bash
 # 1. Cloner le repo
-git clone https://github.com/titano-loris/rag-testkit.git
+git clone https://github.com/titano-loris/test_Meta_Llama-3.2-3B-Instruct
 cd rag-testkit
 
 # 2. Environnement virtuel
