@@ -1,4 +1,4 @@
-# Pipeline CI/CD GitLab — RAG-TestKit
+# Pipeline CI/CD GitLab — pour demo RAG
 #
 # Stratégie : les tests unitaires (rapides, sans LLM) tournent sur chaque
 # commit. Les tests d'évaluation LLM (lents, gourmands en RAM) tournent
